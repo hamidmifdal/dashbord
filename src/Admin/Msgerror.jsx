@@ -1,29 +1,31 @@
 import React, { useState, useEffect } from 'react';
 
-const Msgerror = ({ errorMessage }) => {
+const MessageAlert = ({ message }) => {
   const [isVisible, setIsVisible] = useState(false);
 
   useEffect(() => {
-    if (errorMessage) {
-      setIsVisible(true);
-
+    if (isVisible) {
       const timer = setTimeout(() => {
         setIsVisible(false);
-      }, 3000);
+      }, 5000);
 
       return () => clearTimeout(timer);
     }
-  }, [errorMessage]);
+  }, [isVisible]);
+
+  const handleClick = () => {
+    setIsVisible(true);
+  };
 
   return (
     <div>
       {isVisible && (
-        <div className="alert alert-warning">
-          <p>{errorMessage}</p>
+        <div className="message-alert">
+          <p>{message}</p>
         </div>
       )}
     </div>
   );
 };
 
-export default ErrorAlert;
+export default MessageAlert;

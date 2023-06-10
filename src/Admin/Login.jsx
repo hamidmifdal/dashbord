@@ -3,6 +3,14 @@ import { useNavigate } from "react-router-dom";
 import Msgerror from './Msgerror'
 
 const Login = () => {
+  const [error, setError] = useState('');
+
+  const handle = () => {
+    // Perform login logic here
+
+    // If login fails, set the error message
+    Msgerror('Invalid username or password');
+  };
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');
   const [ishow , isnotshow] = useState(false)
@@ -49,7 +57,7 @@ const Login = () => {
                   onChange={(e) => setPassword(e.target.value)}
                 />
               </div>
-              <button type="submit" className="btn btn-primary">Login</button>
+              <button onClick={handle} type="submit" className="btn btn-primary">Login</button>
             </form>
           </div>
         </div>
