@@ -51,8 +51,11 @@ function Add() {
             {Category}
           </button>
           <ul className="dropdown-menu">
-            <li><button className="dropdown-item" onClick={() => setCategory("Clothing")}>    Clothing    </button></li>
-            <li><button className="dropdown-item" onClick={() => setCategory("Accessories")}> Accessories </button></li>
+            <li><button className="dropdown-item" onClick={() => setCategory("Tshirt")}>    Tshirt    </button></li>
+            <li><button className="dropdown-item" onClick={() => setCategory("Totebag")}> Totebag </button></li>
+            <li><button className="dropdown-item" onClick={() => setCategory("PostWanted")}>       PostWanted       </button></li>
+            <li><button className="dropdown-item" onClick={() => setCategory("Mugs")}>       Mug       </button></li>
+            <li><button className="dropdown-item" onClick={() => setCategory("Hoodies")}>       Hoodies       </button></li>
             <li><button className="dropdown-item" onClick={() => setCategory("Utako")}>       Utako       </button></li>
           </ul>
         </div>

@@ -3,8 +3,6 @@ import { useNavigate } from "react-router-dom";
 import Msgerror from './Msgerror'
 
 const Login = () => {
-  const [error, setError] = useState('');
-
   const handle = () => {
     // Perform login logic here
 
